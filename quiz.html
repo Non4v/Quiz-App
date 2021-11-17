@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>event</title>
+    <script>
+        window.onload = function () {
+            start_btn2.onclick = () => {
+                info_box.classList.add("activeInfo");
+            }
+            exit_btn.onclick = ()=>{
+    info_box.classList.remove("activeInfo");
+}
+continue_btn.onclick = ()=>{
+    info_box.classList.remove("activeInfo");
+    quiz_box.classList.add("activeQuiz");
+    showQuestions(0);
+    queCounter(1);
+    let userScore=0;
+}
+
+
+        }
+
+    </script>
+
+   <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawsome.com/a076d05399.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" 
+    data-auto-replace-svg="nest"></script>
+
+</head>
+
+<body>
+ 
+    <div class="start_btn2"><button>დაიწყე ქვიზი</button></div>
+
+    <div class="info_box">
+        <div class="info_title">
+            <span>წესები</span>
+        </div>
+        <div class="info_list">
+            <div class="info">1.ქვიზი შედგება 5 კითხვისგან</div>
+            <div class="info">2.ერთხელ მონიშნული პასუხის გაუქმება არ შეგიძლიათ</div>
+
+        </div>
+        <div class="buttons">
+            <button class="quit">გამოსვლა</button>
+            <button class="restart">გაგრძელება </button>
+        </div>
+    </div>
+    <div class="quiz_box">
+
+        <section>
+            <div class="que_text">
+                <span>"რამდენი რქა აქვს მარტორქას"</span>
+            </div>
+            <div class="option_list">
+      <!--   <div class="option">
+                    <span>1.ორი</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="option">
+                    <span>2.ერთი</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+
+                </div>
+                <div class="option">
+                    <span>3.მარტორქას გააჩნია</span>
+
+                </div>
+                <div class="option">
+                    <span>4.არც ერთი</span>
+
+                </div> -->
+            </div>
+
+        </section>
+        <footer>
+   
+            <div class="total_que">
+               <span>
+                 <p>5</p>კითხვიდან<p>მე-2</p>კითხვა
+                </span>
+            </div>
+            <button class="next_btn">შემდეგი კითხვა</button>
+       </footer>
+    </div>
+    <div class="result_box">
+        <div class="complete_text">ქვიზი დასრულებულია</div>
+        <div class="score_text">
+           <!-- <span>ბოდიში, თქვენ მხოლოდ<p>2-ს</p>უპასუხეთ <p>5-დან</p></span>-->
+        </div>
+        <div class="buttons">
+            <button class="restart">თავიდან დაწყება</button>
+            <button class="quit">გამოსვლა</button>
+
+
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/questions.js"></script>
+</body>
+
+</html>
